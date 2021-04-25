@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        
+        //No of goodies and products....
+        int n=sc.nextInt();
+        //clearing console
+        String dummy=sc.nextLine();
+        //price of each item stored in item to work with logic
+        int[] prices=new int[n];
+        //to get item name for respective price
+        HashMap<Integer,String> h=new HashMap<Integer,String>();
+        for(int i=0;i<n;i++){
+            String s=sc.nextLine();
+            String goodie[]=s.split(":");
+            String item=goodie[0];
+            int price=Integer.valueOf(goodie[1]);
+            prices[i]=price;
+            h.put(price,item);
+        }
+        
+        Arrays.sort(prices);
+        
+        //queries
+        int q=sc.nextInt();
+        for(int i=0;i<q;i++){
+            //Distribution to m employees
+            int m=sc.nextInt();
+            helper(h,m,prices,n);
+        }
+    }
+    static void helper(HashMap<Integer,String> h,int m,int[] prices,int n){
+        
+        int ans=0;
+        int min=Integer.MAX_VALUE;
+        //Iterating though prices array to get min difference between highest and lowest price
+        for(int i=0;i<n-m;i++){
+            if(prices[i+m-1]-prices[i]<min){
+                min=prices[i+m-1]-prices[i];
+                ans=i;
+            }
+        }
+        System.out.println("Here the goodies that are selected for distribution of "+m+" employees are :");
+        for(int j=ans;j<ans+m;j++){
+            System.out.println(h.get(prices[j])+" : "+prices[j]);
+        }
+        System.out.println("And the difference between the chosen goodie with highest price and the lowest price is "+(prices[ans+m-1]-prices[ans]));
+        System.out.println();
+    }
+}

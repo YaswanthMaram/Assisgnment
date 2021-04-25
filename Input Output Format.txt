@@ -1,0 +1,61 @@
+Input Format taken:
+No.of items
+Followed by item and prices
+No.of queries
+Followed by giveaway for m employees
+-----------------------------------------------------
+Input:
+10            
+Fitbit Plus:7980
+IPods:22349
+MI Band:999
+Cult Pass:2799
+Macbook Pro:229900
+Digital Camera:11101
+Alexa:9999
+Sandwich Toaster:2195
+Microwave Oven:9800
+Scale:4999
+5
+2
+6
+4
+3
+5
+-----------------------------------------------------
+Output:
+Here the goodies that are selected for distribution of 2 employees are :
+Microwave Oven : 9800
+Alexa : 9999
+And the difference between the chosen goodie with highest price and the lowest price is 199
+
+Here the goodies that are selected for distribution of 6 employees are :
+Sandwich Toaster : 2195
+Cult Pass : 2799
+Scale : 4999
+Fitbit Plus : 7980
+Microwave Oven : 9800
+Alexa : 9999
+And the difference between the chosen goodie with highest price and the lowest price is 7804
+
+Here the goodies that are selected for distribution of 4 employees are :
+Fitbit Plus : 7980
+Microwave Oven : 9800
+Alexa : 9999
+Digital Camera : 11101
+And the difference between the chosen goodie with highest price and the lowest price is 3121
+
+Here the goodies that are selected for distribution of 3 employees are :
+Microwave Oven : 9800
+Alexa : 9999
+Digital Camera : 11101
+And the difference between the chosen goodie with highest price and the lowest price is 1301
+
+Here the goodies that are selected for distribution of 5 employees are :
+Scale : 4999
+Fitbit Plus : 7980
+Microwave Oven : 9800
+Alexa : 9999
+Digital Camera : 11101
+And the difference between the chosen goodie with highest price and the lowest price is 6102
+
